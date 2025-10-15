@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IceCream — Delicious Flavors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">IceCream</h1>
+      <nav>
+        <button id="cart-toggle" aria-haspopup="dialog" aria-controls="cart" aria-expanded="false">Cart (<span id="cart-count">0</span>)</button>
+        <button id="price-toggle" aria-haspopup="dialog" aria-controls="price-editor" aria-expanded="false" class="btn btn-ghost" style="margin-left:.5rem">Edit Prices</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h2>Cool. Creamy. Irresistible.</h2>
+        <p>Choose from our handcrafted small-batch flavors. Order online and enjoy!</p>
+        <a class="btn" href="#flavors">Browse Flavors</a>
+      </div>
+    </section>
+
+    <section id="flavors" class="container flavors">
+      <!-- Flavor cards inserted here -->
+    </section>
+  </main>
+
+  <div id="cart" class="cart" role="dialog" aria-hidden="true">
+    <div class="cart-panel">
+      <header class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="cart-close" aria-label="Close cart">✕</button>
+      </header>
+      <div id="cart-items" class="cart-items"></div>
+      <footer class="cart-footer">
+        <div class="total">Total: $<span id="cart-total">0.00</span></div>
+        <div class="cart-actions">
+          <button id="clear-cart" class="btn btn-ghost">Clear</button>
+          <button id="checkout" class="btn">Checkout</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="price-editor" class="price-editor" role="dialog" aria-hidden="true">
+    <div class="price-panel">
+      <header class="cart-header">
+        <h3>Edit Prices</h3>
+        <button id="price-close" aria-label="Close price editor">✕</button>
+      </header>
+      <div id="price-list" class="price-list"></div>
+      <footer class="cart-footer">
+        <div class="cart-actions">
+          <button id="price-reset" class="btn btn-ghost">Reset</button>
+          <button id="price-save" class="btn">Save</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
